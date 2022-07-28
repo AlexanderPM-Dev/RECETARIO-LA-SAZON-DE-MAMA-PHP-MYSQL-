@@ -191,7 +191,9 @@ while($row=mysqli_fetch_array($sql))
 							<div class="category-product  inner-top-vs">
 								<div class="row">									
 			<?php
-$ret=mysqli_query($con,"select * from products where productName like '$find'");
+$ret=mysqli_query($con,"select * from products where productDescription like '%$find%'");
+// $ret=mysqli_query($con,"select * from products where productName like '$find'");
+
 $num=mysqli_num_rows($ret);
 if($num>0)
 {
